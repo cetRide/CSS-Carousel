@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <title>
+      yoQare
+    </title>
+    <link rel="stylesheet" href="c.css" />
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <div class="child-one"></div>
+      <div class="child-two">
+        <a class="prev" onclick="plusSlides(-1)">&#8592;</a>
+        <a class="next" onclick="plusSlides(1)">&#8594;</a>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="images/IMG_20190917_221256_0.jpg" style="width: 100%;" />
+          </div>
+          <div class="grid-item grid-item-right">
+            <p>
+              It’s necessary for the color blocks to have an outer div
+              (.float-child) in order to add space and also have both blocks fit
+              side by side. Well, what if we only had the .float-child divs
+              without padding, and instead tried to add space by putting a
+              margin-right value on the first block like this?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="images/IMG_20190917_221323_1.jpg" style="width: 100%;" />
+          </div>
+          <div class="grid-item grid-item-right">
+            <p>
+              Then each .float-child element has a thinner red border and some
+              more padding. Then the actual color blocks are child elements of
+              the .float-child elements. (You’ll see why in a bit.) To position
+              the divs side by side, we are using the float property to float
+              each .float-child element to the left. Since they are both
+              floating to the left, they will display side by side if there’s
+              enough space for both to fit. They do fit because we have two
+              .float-child divs, each at 50% width.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="images/IMG_20191105_125314_7.jpg" style="width: 100%;" />
+          </div>
+          <div class="grid-item grid-item-right">
+            <p>
+              In this case, both .float-child elements would take up 50% of the
+              total width. But the first green element would also have a margin
+              of 20px. This would mean that both blocks would take up 50% + 20px
+              + 50% width. This would be 20px more than 100% width, meaning
+              there’s not enough room for both to be side by side. The second
+              blue block would then wrap to the next row underneath the first
+              block, and float to the left there:
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="images/IMG_20191209_134908_6.jpg" style="width: 100%;" />
+          </div>
+          <div class="grid-item grid-item-right">
+            <p>
+              You can try to tweak the widths so they are 48% or some other
+              number less than 50% to fit them. But it won’t be exact. That’s
+              why I personally like wrapping the blocks in an outer div set at
+              50% width, with padding to add the space between the divs.
+              Nowadays, it’s easier to use other, newer methods in CSS to place
+              divs side by side rather than with float. Let’s take a look at one
+              of these: the flexbox method!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </body>
+  <script src="c.js"></script>
+</html>
